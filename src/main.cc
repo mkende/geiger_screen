@@ -133,6 +133,18 @@ void parse_and_print() {
   display.print("mode: ");
   display.println(str);
   
+  // The electronic in the counter uses `dose = CPM * 0.0057 µSv/h`, this value
+  // seems reasonable for the SBM20 tube according to the web (you can find
+  // values between 0.0051 and 0.0067).
+  // One correction that could be added is taking the dead time of the tube into
+  // account: `actual_count = count / (1 - (count * dead_time)`
+  // On the SBM20, the dead time is documented to be 190 µS.
+  // A standard "conversion" factor to display the radiation in Roentgen is
+  // `1mR = 10 µSv`.
+  //
+  // Regulatory limit (in France) is 1mSv/year (0.114 µSv/h), it is recommended
+  // to evacuate above 5.7 µSv/h and take iodine tabs above 11.4 µSv/h.
+  
   for (int i = 0; i < SCREEN_WIDTH; i++) {
     int val = counts[(counts_pos + i) % SCREEN_WIDTH];
     if (val != 0) {
