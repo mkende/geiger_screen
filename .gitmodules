@@ -1,0 +1,15 @@
+[submodule "third_party/teensy_core"]
+	path = third_party/teensy_core
+	url = git@github.com:PaulStoffregen/cores.git
+[submodule "third_party/SPI"]
+	path = third_party/SPI
+	url = git@github.com:PaulStoffregen/SPI.git
+[submodule "third_party/Adafruit_SSD1306"]
+	path = third_party/Adafruit_SSD1306
+	url = https://github.com/adafruit/Adafruit_SSD1306.git
+[submodule "third_party/Adafruit_GFX"]
+	path = third_party/Adafruit_GFX
+	url = https://github.com/adafruit/Adafruit-GFX-Library.git
+[submodule "third_party/Wire"]
+	path = third_party/Wire
+	url = https://github.com/PaulStoffregen/Wire.git
