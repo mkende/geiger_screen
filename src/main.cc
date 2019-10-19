@@ -122,7 +122,7 @@ void parse_and_print() {
   display.println(cpm);
   display.print("dose: ");
   display.print(dose);
-  display.println(" uSv/h");
+  display.println(" \346Sv/h");  // 0346 == 230 == 'µ' en ASCII
   display.print("mode: ");
   display.println(str);
   
