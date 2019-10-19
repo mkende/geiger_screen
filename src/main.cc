@@ -1,3 +1,10 @@
+// This program reads the serial data written by a mightyohm.com Geiger counter
+// (https://mightyohm.com/blog/products/geiger-counter/) and display the
+// information on an SSD1306 OLED screen (https://www.adafruit.com/products/938)
+// using a SPI interface.
+// It is made to run on a Teensy LC (https://www.pjrc.com/teensy/teensyLC.html)
+// but could probably be adapted for most Arduino compatible boards.
+
 #include <stdlib.h>
 #include <string.h>
 
